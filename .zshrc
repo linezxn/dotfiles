@@ -6,6 +6,16 @@ PROMPT=' %F{yellow}:%/%f %B%F{blue}%f%b '
      
 setopt histignorealldups sharehistory
 
+#Aliases
+alias vi='nvim'
+alias sudo='sudo -p "$(printf "\033[1;31mPassword: \033[1;32m" )"'
+alias rm='printf "\033[1;31m" && rm -rIv'
+alias cp='printf "\033[1;32m" && cp -rv'
+alias mv='printf "\033[1;34m" && mv -v'
+alias mkdir='printf "\033[1;33m" && mkdir -v'
+alias rmdir='printf "\033[1;35m" && rmdir -v'
+alias date='printf "\033[1;35m" && date'
+
 # Use emacs keybindings even if our EDITOR is set to vi
 bindkey -e
 
