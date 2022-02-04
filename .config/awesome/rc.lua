@@ -27,13 +27,13 @@ awful.layout.layouts = {
   --awful.layout.suit.magnifier,
   --awful.layout.suit.tile.bottom,
   --awful.layout.suit.tile.top,
-  --awful.layout.suit.corner.nw,
+  awful.layout.suit.corner.nw,
   --awful.layout.suit.fair.horizontal,
   --awful.layout.suit.spiral,
   --awful.layout.suit.max.fullscreen,
-  --awful.layout.suit.corner.ne,
-  --awful.layout.suit.corner.sw,
-  --awful.layout.suit.corner.se,
+  awful.layout.suit.corner.ne,
+  awful.layout.suit.corner.sw,
+  awful.layout.suit.corner.se,
   awful.layout.suit.floating,
 }
 
@@ -66,7 +66,7 @@ awful.rules.rules = {
 
   -- Floating exceptions
   { rule_any = {
-      class = {'Lxappearance', 'qt5ct', 'netease-cloud-music', 'Vivaldi', 'spark-store'},
+      class = {'Lxappearance', 'qt5ct', 'netease-cloud-music', 'Vivaldi', 'spark-store', 'feh'},
       name = {'Event Tester'}, --xev
       role = {'pop-up', 'GtkFileChooserDialog'},
       type = {'dialog'}
@@ -91,6 +91,7 @@ awful.spawn.with_shell('dunst')
 awful.spawn.with_shell('picom')
 awful.spawn.with_shell('feh --bg-fill -r -z ~/Pictures/Wallpapers')
 awful.spawn.with_shell('flameshot')
+awful.spawn.with_shell('$HOME/Scripts/caps_to_escape_control.sh')
 
 -- Garbage Collection
 collectgarbage('setpause', 110)

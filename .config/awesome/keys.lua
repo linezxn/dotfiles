@@ -27,6 +27,8 @@ keys.globalkeys = gears.table.join(
   -- Window management
   awful.key({mod}, 'h', function() awful.client.focus.byidx(1) end),
   awful.key({mod}, 'l', function() awful.client.focus.byidx(-1) end),
+  awful.key({mod, 'Shift'}, 'h', function() awful.client.swap.byidx(1) end),
+  awful.key({mod, 'Shift'}, 'l', function() awful.client.swap.byidx(-1) end),
   awful.key({mod}, 'Right', function () awful.tag.incmwfact(0.05) end),
   awful.key({mod}, 'Left', function () awful.tag.incmwfact(-0.05) end),
   awful.key({mod}, 'Up', function () awful.client.incwfact(0.05) end),
@@ -50,8 +52,8 @@ keys.clientkeys = gears.table.join(
 keys.clientbuttons = gears.table.join(
   awful.button({}, 1, function(c) client.focus = c end),
   awful.button({mod}, 1, function() awful.mouse.client.move() end),
-  awful.button({mod}, 2, function(c) c:kill() end),
-  awful.button({mod}, 3, function() awful.mouse.client.resize() end)
+  --awful.button({mod}, 3, function(c) c:kill() end),
+  awful.button({mod}, 2, function() awful.mouse.client.resize() end)
 )
 
 for i = 1, tags do
