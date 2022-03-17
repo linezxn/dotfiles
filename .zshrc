@@ -2,7 +2,7 @@
 
 autoload -Uz promptinit
 promptinit
-PROMPT=' %F{cyan}:%/%f %B%F{blue}%f%b ' 
+PROMPT=' %F{cyan}%~%f %B%F{blue}->%f%b ' 
      
 setopt histignorealldups sharehistory
 
